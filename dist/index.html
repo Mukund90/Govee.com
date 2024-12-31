@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <title>Govee Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="./images/icons.png" type="image/x-icon">
+    
+</head>
+<body class="bg-gray-100">
+    <!-- Promo Banner -->
+    <div class="flex flex-col items-center justify-center h-24 bg-blue-600 text-white mt-16">
+        <p class="text-lg md:text-2xl font-semibold">
+            🎉Wrap Up 2024 for Less🎉 
+        </p>
+        <button class="bg-white text-gray-800 font-semibold rounded-full py-1 px-4 text-sm md:text-base transition duration-300 ease-in-out hover:bg-blue-500 hover:text-orange-600 focus:outline-none focus:ring-2 focus:ring-blue-500 mt-2" onclick={handelclick()}>
+            Shop Now
+        </button>
+    </div>
+ 
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="flex-shrink-0">
+                        <img class="h-10 w-auto" src="../dist/images/icons.png" alt="Govee Logo">
+                    </a>
+                </div>
+                
+      
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#" class="text-gray-800 hover:text-blue-500 hover:underline">Home</a>
+                    <a href="#products_section" class="text-gray-800 hover:text-blue-500 hover:underline">Products</a>
+                    <a href="http://127.0.0.1:5500/dist/Cart.html" class="text-gray-800 hover:text-blue-500 hover:underline">Cart</a>
+                    <a href="" class="text-gray-800 hover:text-blue-500 hover:underline">Contact</a>
+                </div>
+
+
+                <div class="-mr-2 flex md:hidden">
+                    <button id="menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-200 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#" class="block text-gray-800 hover:bg-gray-200 rounded-md px-3 py-2">Home</a>
+                <a href="#products_section" class="block text-gray-800 hover:bg-gray-200 rounded-md px-3 py-2">Products</a>
+                <a href="http://127.0.0.1:5500/dist/Cart.html" class="block text-gray-800 hover:bg-gray-200 rounded-md px-3 py-2">Cart</a>
+                <a href="#" class="block text-gray-800 hover:bg-gray-200 rounded-md px-3 py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+<div class="pt-navbar flex justify-center items-center min-h-screen bg-gray-100">
+    <div class="relative w-full">
+        <img src="./images/slider.jpg" alt="Bedroom Image" class="w-full h-auto">
+        <div class="absolute bottom-0 left-0 right-0 text-center py-4">
+            <p class="text-xl md:text-3xl font-semibold tracker-wider text-white">
+                Bedroom
+            </p>
+        </div>
+    </div>
+</div>
+
+<div id ="products_section" class="flex flex-wrap justify-start gap-6 p-6 items-start cursor-pointer ">
+   
+    <div class="w-64 h-96 bg-white rounded-lg shadow-md hover:shadow-lg  hover:scale-105 transition-transform ease-out">
+        <img src="./images/card1.jpg" alt="Govee Neon Rope Light 2" class="rounded-t-lg object-cover h-48 w-full">
+        <div class="p-4">
+            <h2 class="text-lg font-semibold text-gray-800 truncate">Govee Neon Rope Light 2</h2>
+            <div class="flex items-center gap-2 mt-2">
+                <span class="text-red-500 font-bold text-xl">$74.99</span>
+                <span class="line-through text-gray-500 text-sm">$99.99</span>
+            </div>
+            <div class="mt-2 text-sm text-white bg-red-500 px-2 py-1 inline-block rounded">-25%</div>
+            <button class="mt-2 w-full bg-blue-500 text-white py-1.5 rounded hover:bg-blue-600 transition text-center" onclick={Go_to_cart()}>Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="w-64 h-96 bg-white rounded-lg shadow-md hover:shadow-lg  hover:scale-105 transition-transform ease-out">
+        <img src="./images/card2.jpg" alt="Govee Smart Retrofit Recessed Lights" class="rounded-t-lg object-cover h-48 w-full">
+        <div class="p-4">
+            <h2 class="text-lg font-semibold text-gray-800 truncate">Govee Smart Retrofit Recessed Lights</h2>
+            <div class="flex items-center gap-2 mt-2">
+                <span class="text-red-500 font-bold text-xl">$99.99</span>
+                <span class="line-through text-gray-500 text-sm">$129.99</span>
+            </div>
+            <div class="mt-2 text-sm text-white bg-red-500 px-2 py-1 inline-block rounded">-$30</div>
+            <button class="mt-2 w-full bg-blue-500 text-white py-1.5 rounded hover:bg-blue-600 transition" onclick={Go_to_cart()}>Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="w-64 h-96 bg-white rounded-lg shadow-md hover:shadow-lg  hover:scale-105 transition-transform ease-out">
+        <img src="./images/card4.jpg" alt="Another Product" class="rounded-t-lg object-cover h-48 w-full">
+        <div class="p-4">
+            <h2 class="text-lg font-semibold text-gray-800 truncate">Govee COB Strip Light Pro</h2>
+            <div class="flex items-center gap-2 mt-2">
+                <span class="text-red-500 font-bold text-xl">$89.99</span>
+                <span class="line-through text-gray-500 text-sm">$119.99</span>
+            </div>
+            <div class="mt-2 text-sm text-white bg-red-500 px-2 py-1 inline-block rounded">-$30</div>
+            <button class="mt-2 w-full bg-blue-500 text-white py-1.5 rounded hover:bg-blue-600 transition" onclick={Go_to_cart()}>Add to Cart</button>
+        </div>
+    </div>
+    <div class="w-64 h-96 bg-white rounded-lg shadow-md hover:shadow-lg  hover:scale-105 transition-transform ease-out">
+        <img src="./images/card5.jpg" alt="Another Product" class="rounded-t-lg object-cover h-48 w-full">
+        <div class="p-4">
+            <h2 class="text-lg font-semibold text-gray-800 truncate">Govee Star Light Projector</h2>
+            <div class="flex items-center gap-2 mt-2">
+                <span class="text-red-500 font-bold text-xl">$89.99</span>
+                <span class="line-through text-gray-500 text-sm">$119.99</span>
+            </div>
+            <div class="mt-2 text-sm text-white bg-red-500 px-2 py-1 inline-block rounded">-$30</div>
+            <button class="mt-2 w-full bg-blue-500 text-white py-1.5 rounded hover:bg-blue-600 transition"  onclick={Go_to_cart()}>Add to Cart</button>
+        </div>
+    </div>
+    <div class="w-64 h-96 bg-white rounded-lg shadow-md hover:shadow-lg  hover:scale-105 transition-transform ease-out">
+        <img src="./images/card6.jpg" alt="Another Product" class="rounded-t-lg object-cover h-48 w-full">
+        <div class="p-4">
+            <h2 class="text-lg font-semibold text-gray-800 truncate">Govee Floor Lamp 2</h2>
+            <div class="flex items-center gap-2 mt-2">
+                <span class="text-red-500 font-bold text-xl">$89.99</span>
+                <span class="line-through text-gray-500 text-sm">$119.99</span>
+            </div>
+            <div class="mt-2 text-sm text-white bg-red-500 px-2 py-1 inline-block rounded">-$30</div>
+            <button class="mt-2 w-full bg-blue-500 text-white py-1.5 rounded hover:bg-blue-600 transition" onclick={Go_to_cart()}>Add to Cart</button>
+        </div>
+    </div>
+    <div class="w-64 h-96 bg-white rounded-lg shadow-md hover:shadow-lg  hover:scale-105 transition-transform ease-out">
+        <img src="./images/card7.jpg" alt="Another Product" class="rounded-t-lg object-cover h-48 w-full">
+        <div class="p-4">
+            <h2 class="text-lg font-semibold text-gray-800 truncate">Govee RGBICW LED Strip Lights</h2>
+            <div class="flex items-center gap-2 mt-2">
+                <span class="text-red-500 font-bold text-xl">$89.99</span>
+                <span class="line-through text-gray-500 text-sm">$119.99</span>
+            </div>
+            <div class="mt-2 text-sm text-white bg-red-500 px-2 py-1 inline-block rounded">-$50</div>
+            <button class="mt-2 w-full bg-blue-500 text-white py-1.5 rounded hover:bg-blue-600 transition" onclick={Go_to_cart()}>Add to Cart</button>
+        </div>
+    </div>
+    <div class="w-64 h-96 bg-white rounded-lg shadow-md hover:shadow-lg  hover:scale-105 transition-transform ease-out">
+        <img src="./images/card8.jpg" alt="Another Product" class="rounded-t-lg object-cover h-48 w-full">
+        <div class="p-4">
+            <h2 class="text-lg font-semibold text-gray-800 truncate">TechNova Ultra</h2>
+            <div class="flex items-center gap-2 mt-2">
+                <span class="text-red-500 font-bold text-xl">$89.99</span>
+                <span class="line-through text-gray-500 text-sm">$119.99</span>
+            </div>
+            <div class="mt-2 text-sm text-white bg-red-500 px-2 py-1 inline-block rounded">-$10</div>
+            <button class="mt-2 w-full bg-blue-500 text-white py-1.5 rounded hover:bg-blue-600 transition" onclick={Go_to_cart()}>Add to Cart</button>
+        </div>
+    </div>
+    <div class="w-64 h-96 bg-white rounded-lg shadow-md hover:shadow-lg  hover:scale-105 transition-transform ease-out">
+        <img src="./images/card9.jpg" alt="Another Product" class="rounded-t-lg object-cover h-48 w-full">
+        <div class="p-4">
+            <h2 class="text-lg font-semibold text-gray-800 truncate">SmartGlo 360</h2>
+            <div class="flex items-center gap-2 mt-2">
+                <span class="text-red-500 font-bold text-xl">$89.99</span>
+                <span class="line-through text-gray-500 text-sm">$119.99</span>
+            </div>
+            <div class="mt-2 text-sm text-white bg-red-500 px-2 py-1 inline-block rounded">-$40</div>
+            <button class="mt-2 w-full bg-blue-500 text-white py-1.5 rounded hover:bg-blue-600 transition" onclick={Go_to_cart()}>Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="flex justify-center items-center p-4">
+    <div>
+        <p class="text-center text-lg sm:text-xl md:text-4xl font-semibold">They're Saying</p>
+    </div>
+</div>
+<div class="flex flex-col md:flex-row gap-4 cursor-pointer">
+    <div class="flex justify-center items-center mb-4 md:mb-0 w-full md:w-1/3 h-80">
+        <img src="./images/whattheysay1.jpg" alt="Image 1" class="w-full h-full object-cover" />
+    </div>
+    <div class="flex justify-center items-center mb-4 md:mb-0 w-full md:w-1/3 h-80">
+        <img src="./images/whattheysay2.jpg" alt="Image 2" class="w-full h-full object-cover" />
+    </div>
+    <div class="flex justify-center items-center w-full md:w-1/3 h-80">
+        <img src="./images/whattheysay3.jpg" alt="Image 3" class="w-full h-full object-cover" />
+    </div>
+</div>
+
+
+
+
+<footer class="bg-gray-800 text-white py-10">
+    <div class="container mx-auto px-4">
+  
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+          
+            <div class="space-y-4">
+                <h3 class="text-xl font-semibold">About Us</h3>
+                <p class="text-sm text-gray-400">We are a leading eCommerce platform offering a wide range of products to cater to all your needs. Our mission is to provide quality and convenience to every customer.</p>
+            </div>
+
+            <div class="space-y-4">
+                <h3 class="text-xl font-semibold">Customer Service</h3>
+                <ul class="text-sm text-gray-400">
+                    <li><a href="#" class="hover:text-gray-300">Help & Support</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Shipping & Returns</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Track Your Order</a></li>
+                    <li><a href="#" class="hover:text-gray-300">FAQs</a></li>
+                </ul>
+            </div>
+
+        
+            <div class="space-y-4">
+                <h3 class="text-xl font-semibold">Quick Links</h3>
+                <ul class="text-sm text-gray-400">
+                    <li><a href="#" class="hover:text-gray-300">Store</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Products</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Contact Us</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <h3 class="text-xl font-semibold">Follow Us</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-gray-300"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-gray-300"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-10">
+            <h3 class="text-xl font-semibold mb-4">Subscribe to Our Newsletter</h3>
+            <form action="#" method="post" class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <input type="email" placeholder="Enter your email" class="w-full sm:w-80 px-4 py-2 rounded-md text-black" required />
+                <button type="submit" class="bg-blue-600 text-white py-2 px-6 rounded-md hover:bg-blue-700">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <div class="mt-10 border-t border-gray-700 pt-4 text-center">
+        <p class="text-sm text-gray-400">© 2024 Govee.com All rights reserved.</p>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        function handelclick()
+        {
+          window.location.href="#products_section"
+        
+        }
+
+        function Go_to_cart()
+    {
+         window.location.href="http://127.0.0.1:5500/dist/Cart.html"
+    }
+    </script>
+
+    <!-- Proper Placement of Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+   
+</body>
+</html>
